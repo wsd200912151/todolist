@@ -1,0 +1,408 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: '微软雅黑';
+  font-size: 14px;
+  color: #000;
+  box-sizing: border-box;
+  outline: none;
+}
+
+@media screen and (max-width: 1080px) {
+  html {
+    font-size: 100px;
+  }
+}
+
+@media screen and (max-width: 936px) {
+  html {
+    font-size: 86.66667px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 71.11111px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 44.44444px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  html {
+    font-size: 38.33333px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  html {
+    font-size: 38.14815px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  html {
+    font-size: 35.18519px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 34.72222px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 33.33333px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 29.62963px;
+  }
+}
+
+@font-face {
+  font-family: 'apple';
+  src: url(word/myriad-set-pro_text.woff);
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url(icon/iconfont.woff);
+}
+
+@font-face {
+  font-family: 'iconfont1';
+  src: url(icon/iconfont1.woff);
+}
+
+@font-face {
+  font-family: 'iconfont2';
+  src: url(icon/iconfont2.woff);
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+}
+
+.iconfont1 {
+  font-family: "iconfont1" !important;
+}
+
+.iconfont2 {
+  font-family: "iconfont2" !important;
+}
+
+.icon-wancheng:before {
+  content: "\e650";
+}
+
+.icon-wancheng1:before {
+  content: "\e7dc";
+}
+
+.icon-tijiao1:before {
+  content: "\e668";
+}
+
+.icon-xiugai:before {
+  content: "\e6d6";
+}
+
+.icon-xiugai:before {
+  content: "\e6d6";
+}
+
+.icon-xiugai1:before {
+  content: "\e706";
+}
+
+.icon-xiugai3:before {
+  content: "\e63d";
+}
+
+.icon-tianjia:before {
+  content: "\e644";
+}
+
+.icon-tianjia1:before {
+  content: "\e639";
+}
+
+.icon-tianjia2:before {
+  content: "\e634";
+}
+
+.icon-renwu:before {
+  content: "\e71a";
+}
+
+.icon-todolist:before {
+  content: "\e7f1";
+}
+
+.head {
+  width: 100%;
+  height: 1.2rem;
+  background: #b0dcd5;
+  font-family: 'apple';
+}
+
+.head span {
+  font-size: 0.8rem;
+  color: white;
+  line-height: 1.2rem;
+}
+
+.input {
+  width: 100%;
+  height: 1.2rem;
+  background: #efc7bd;
+  position: relative;
+  padding: 0 0.5rem;
+}
+
+.input input {
+  width: 70%;
+  height: 80%;
+  border-radius: 0.4rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 0.4rem;
+  padding-left: 15px;
+}
+
+.input .icon-renwu:before {
+  content: "\e71a";
+  font-size: 0.8rem;
+  color: #fff;
+  line-height: 1.2rem;
+  float: left;
+}
+
+.input .icon-tianjia:before {
+  content: "\e644";
+  font-size: 0.8rem;
+  color: #fff;
+  line-height: 1.2rem;
+  float: right;
+}
+
+.set {
+  width: 100%;
+  height: 1.2rem;
+  background: #efc7bd;
+  position: relative;
+  padding: 0 0.5rem;
+  margin-top: 0.05rem;
+}
+
+.set span {
+  font-size: 0.4rem;
+  line-height: 1.2rem;
+  margin-right: 0.3rem;
+  float: left;
+  color: #fff;
+}
+
+.set .cir {
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  float: right;
+  margin-top: 0.35rem;
+  margin-left: 0.4rem;
+  position: relative;
+}
+
+.set .cir .icon-wancheng3:before {
+  font-size: 0.4rem;
+  content: "\e670";
+  color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: none;
+}
+
+.set .icon-shanchu:before {
+  content: "\e61c";
+  font-size: 0.6rem;
+  margin-top: 0.2rem;
+  color: #fff;
+  float: right;
+}
+
+.set span.complete {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.set.click .icon-wancheng3:before {
+  display: block;
+}
+
+.lists {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.lists::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.lists .list {
+  width: 100%;
+  height: 2rem;
+  background: #fde7c6;
+  margin: 2px auto;
+  padding-right: 0.5rem;
+  padding-left: 0.8rem;
+  position: relative;
+  transition: transform 0.8s ease,opacity 0.8s ease;
+}
+
+.lists .list .content {
+  width: 75%;
+  height: 100%;
+  float: left;
+  padding-left: 10px;
+  position: relative;
+}
+
+.lists .list .content span {
+  font-size: 0.5rem;
+  line-height: 2rem;
+}
+
+.lists .list .content .delete {
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: none;
+}
+
+.lists .list .icon-xiugai2:before {
+  content: "\e647";
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+  color: #fff;
+  float: right;
+}
+
+.lists .list .icon-wancheng2:before {
+  content: "\e63b";
+  font-size: 0.6rem;
+  color: #fff;
+  position: absolute;
+  top: 0.7rem;
+  right: 1.5rem;
+  display: none;
+}
+
+.lists .list .cir {
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  float: right;
+  margin-top: 0.75rem;
+  margin-left: 0.5rem;
+  position: relative;
+}
+
+.lists .list .cir .icon-wancheng3:before {
+  font-size: 0.4rem;
+  content: "\e670";
+  color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: none;
+}
+
+.lists .list input {
+  width: 70%;
+  height: 1.5rem;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 0.5rem;
+  font-size: 0.4rem;
+  padding-left: 15px;
+  display: none;
+}
+
+@keyframes aa {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.lists .list.fly {
+  animation: aa 2s ease 0.8s both;
+}
+
+.lists .list.small {
+  transform: scale(0.8, 0.7);
+  opacity: 0.5;
+}
+
+.lists .list.move-del .content span {
+  color: #fff;
+}
+
+.lists .list.move-del .content .delete {
+  background: #fff;
+  display: block;
+}
+
+.lists .list.move-del .icon-xiugai2:before {
+  display: none;
+}
+
+.lists .list.revise .content, .lists .list.revise .icon-xiugai2:before {
+  display: none;
+}
+
+.lists .list.revise input, .lists .list.revise .icon-wancheng2:before {
+  display: block;
+}
+
+.lists .list.click .icon-wancheng3:before {
+  display: block;
+}

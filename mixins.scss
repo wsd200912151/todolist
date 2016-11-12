@@ -1,0 +1,123 @@
+@mixin  clear-style {
+  margin:0;
+  padding:0;
+  border:0;
+  text-decoration: none;
+  list-style:none;
+  font-family: '微软雅黑';
+  font-size:14px;
+  color:#000;
+  @content;
+}
+@mixin font-div($width:$height,$height:$width){
+  width:$width;
+  height:$height;
+  display:block;
+  @content;
+}
+@mixin  div-box-color ($width,$height,$color){
+  width:$width;
+  height:$height;
+  background:$color;
+  @content;
+}
+@mixin  div-box ($width:$height,$height:$width){
+  width:$width;
+  height:$height;
+  margin: 0 auto;
+  @content;
+}
+@mixin  div-box-max ($width,$height){
+  max-width:$width;
+  height:$height;
+  margin: 0 auto;
+  @content;
+}
+@mixin  square($width:$height,$height:$width){
+  width:$width;
+  height:$height;
+  @content;
+}
+@mixin  font-style($size,$color,$h){
+  font-size:$size;
+  color:$color;
+  line-height:$h;
+  @content;
+}
+@mixin  font-center($size,$color,$h){
+  font-size:$size;
+  color:$color;
+  line-height:$h;
+  text-align:center;
+  @content;
+}
+@mixin  juzhong{
+    position: absolute;
+    right:0;
+    left:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+    @content;
+}
+@mixin  po-center{
+  position: absolute;
+  right:0;
+  left:0;
+  margin:auto;
+  @content;
+}
+@mixin  cnm ($m-width:1050px){
+  @media screen and (max-width:$m-width){
+    @content;
+  }
+}
+@mixin  cns($s-width:700px) {
+  @media screen and (max-width:$s-width){
+    @content;
+  }
+}
+@mixin lms ($lms,$num:12) {
+  @for $i from 1 through $num {
+    .#{$lms}-#{$i} {
+      width:percentage($i/$num);
+      @content;
+    }
+  }
+}
+@mixin transition($style:transform,$time:0.8s,$dely:0s){
+  transition: $style $time ease $dely;
+}
+@mixin nth-child ($num,$style,$dely) {
+  @for $i from 1 through $num {
+    &:nth-child(#{$i}) {
+      transition: $style 0.6s ease $i*$dely;
+      @content;
+    }
+  }
+}
+@mixin nth-child-style ($start:$end,$end:$start) {
+  @for $i from $start  through $end {
+    &:nth-child(#{$i}) {
+      @content;
+    }
+  }
+}
+@mixin bg-img($a-bgc) {
+  @each $lia in map_keys($a-bgc) {
+    &.#{$lia}{
+      background:map_get($a-bgc,$lia) url("images/#{$lia}_large.jpg") no-repeat center center;
+      background-size:auto 500px;
+    }
+  }
+}
+@mixin useRem($des){
+  $list:$des,936px,768px,480px,414px,412px,380px,375px,360px,320px;
+  @each $i in $list{
+    @media screen and (max-width:#{$i}){
+      html{
+        font-size:100px*$i/$des;
+      }
+    }
+  }
+}
